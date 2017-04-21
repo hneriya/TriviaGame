@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>trivia game!!!</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+    .carousel-inner img {
+        width: 100%;
+        /* Set width to 100% */
+        margin: auto;
+        min-height: 200px;
+    }
+    
+    .item-active {
+        height: 500px;
+    }
+    
+    #scoreboard {
+        text-align: center;
+    }
+    
+    footer {
+        background-color: #f2f2f2;
+        padding: 25px;
+    }
+    /* Hide the carousel text when the screen is less than 600 pixels wide */
+    
+    @media (max-width: 600px) {
+        .carousel-caption {
+            display: none;
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <!-- pretty picture of traffic at top -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item-active">
+                <img src="http://curious.kcrw.com/wp-content/uploads/2015/03/la-traffic.jpg" alt="traffic">
+                <div class="carousel-caption"> </div>
+            </div>
+        </div>
+    </div>
+    <!--  title and start button -->
+    <div class="container text-center">
+        <h3>Miscellaneous trivia questions!</h3>
+        <br>
+        <button type="startButton" class="btn btn-primary btn-lg" id="start-Button">Start the clock!</button>
+    </div>
+    <br>
+    <!-- 8 trivia questions, 4 answers for each question, corect answer marked by value 'correct' -->
+    <div id="questions" style="text-align: center;">
+        <div class="idTimer" text-center>
+            <h3 style="text-align: center;">Time remaining: </h3>
+            <div style="text-align: center; font-size: 55px;" class="timer"></div>
+        </div>
+        <h3> 1. What is the name of our beloved Los Angeles Mayor who has maintained the shitty status of this city? </h3>
+        <form>
+            <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option"> Antonio Villaraigosa
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="correct"> Eric Garcetti
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option"> Gavin Newsom
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option"> Dianne Feinstein
+            </label>
+        </form>
+        <h3> 2. What is the name of our beloved former Los Angeles Mayor who helped turn LA into a cesspool? </h3>
+        <form>
+            <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="correct"> Antonio Villaraigosa
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option"> Eric Garcetti
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option"> Gavin Newsom
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option"> Dianne Feinstein
+            </label>
+        </form>
+        <h3> 3. What is the name of our beloved senator in California who has been senile and innefective since 1992? </h3>
+        <form>
+            <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option"> Antonio Villaraigosa
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option"> Eric Garcetti
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option"> Gavin Newsom
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="correct"> Dianne Feinstein
+            </label>
+        </form>
+        <h3> 4. What is the name of our beloved Lt. Governor who thinks check cashing stores are the biggest problem in California? </h3>
+        <form>
+            <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option"> Antonio Villaraigosa
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option"> Eric Garcetti
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="correct"> Gavin Newsom
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option"> Dianne Feinstein
+            </label>
+        </form>
+        <h3> 5. How many times has Antonio Villaraigosa failed the California state legal boards? </h3>
+        <form>
+            <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option"> 1
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option"> 2
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="correct"> 3
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option"> 0- he is actually intelligent, charming, and competant at everything he puts his mind to.
+            </label>
+        </form>
+        <h3> 6. Percent of californians who use seatbelts before the "Click it or ticket campaign"? </h3>
+        <form>
+            <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option"> 95%
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option"> 96%
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="correct"> 97%
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option"> 98%
+            </label>
+        </form>
+        <h3> 7. Percent of californians who use seatbelts after the "Click it or ticket campaign"? </h3>
+        <form>
+            <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option"> 95%
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option"> 96%
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="correct"> 97%
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option"> 98%
+            </label>
+        </form>
+        <h3> 8. Which of the following problems does our beloved Los Angeles government ignore in favor of the other 3 options ?</h3>
+        <form>
+            <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option"> Making sure people do not trim their Oak trees on private property
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option"> Banning smoking cigarettes in public areas in several cities
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option"> a government campaign telling people to to put on their seat belts which has not made a change since it was implemented in 2005?
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="correct"> traffic
+            </label>
+        </form>
+        <br>
+        <!-- button to stop clock and submit answers -->
+        <div class="container text-center">
+            <button type="submit" id="submitButton" class="btn btn-primary btn-lg text-center">submit</button>
+        </div>
+    </div>
+    <!-- display of answers correct, incorrect and number of questions not answered -->
+    <div id="scoreboard">
+        <h3 id="correctCount"> answers correct: </h3>
+        <h3 id="incorrectCount"> answers incorrect: </h3>
+        <h3 id="unansweredCount"> unanswered questions:</h3>
+    </div>
+    <!-- footer with no relevance -->
+    <footer class="container-fluid text-center">
+        <p>"The reality is when you have a disaster of that proportion, you need the federal government." - Antonio Villaraigosa</p>
+    </footer>
+    <script type="text/javascript" source="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+</body>
+
+</html>
